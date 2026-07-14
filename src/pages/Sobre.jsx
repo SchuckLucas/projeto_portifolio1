@@ -1,3 +1,3 @@
 export default function Sobre() {
-  return <p>Página Sobre</p>;
+  return <main className="main">Página Sobre</main>;
 }
