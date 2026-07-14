@@ -33,9 +33,9 @@ export default function Home() {
   return (
     <>
       <header className="header">
-        <div className="box_titulo">
-          <h1 className="titulos">Bem Vindo, venha ver mais sobre nós</h1>
-          <h2 className="subtitulos">Aurora Café</h2>
+        <div>
+          <h1 className="titulos">Bem-Vindo, venha ver mais sobre nós</h1>
+          <h2 className="subtitulos">[Nome Empresa]</h2>
         </div>
         <Link className="links" to="/sobre">
           Sobre
@@ -46,14 +46,14 @@ export default function Home() {
           <img
             className="imagem"
             src={imagemInicial}
-            alt="Imagem de Cafetera"
+            alt="Imagem de Cafeteria"
           />
         </section>
-        <section className="box_section1">
+        <section className="box_section1 section_textos">
           <h1 className="titulos">Nossa história</h1>
           <p className="textos">
-            A Aurora Café nasceu da paixão por cafés especiais e da vontade de
-            criar um lugar onde as pessoas pudessem se encontrar, conversar e
+            A [Nome Empresa] nasceu da paixão por cafés especiais e da vontade
+            de criar um lugar onde as pessoas pudessem se encontrar, conversar e
             aproveitar momentos únicos. Trabalhamos com grãos cuidadosamente
             selecionados, preparados por baristas apaixonados pelo que fazem,
             sempre buscando oferecer qualidade em cada detalhe.
@@ -98,7 +98,9 @@ export default function Home() {
           <h1 className="titulos">Referência de Mercado</h1>
         </section>
         <section className="box_section1">
-          <h1 className="titulos">O que nossos clientes dizem</h1>
+          <h1 className="titulos">
+            O que nossos clientes dizem (Depoimentos fictícios)
+          </h1>
           <div className="box_cards">
             <div className="card">
               <h2 className="subtitulos">Ana Martins</h2>
