@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   useEffect(() => {
     const elements = getElements();
+    const img = document.querySelector(".imagem");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {

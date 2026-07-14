@@ -193,9 +193,12 @@ section,
     width: 175%;
     border-radius: 0;
     box-sizing: none;
+    transform: none;
+    /*Isso serve para que a imagem não fique com um translate X que impessa ela de ser detectada pelo observer*/
   }
 
   .links {
     -webkit-tap-highlight-color: transparent;
+    /*Isso serve para remover uma marcação azul gerada automaticamente em alguns navegadores mobile*/
   }
 }
