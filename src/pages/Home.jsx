@@ -25,7 +25,6 @@ export default function Home() {
           list.push(filho);
         });
       });
-      console.log(list);
       return list;
     }
   }, []);

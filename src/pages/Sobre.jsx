@@ -24,7 +24,6 @@ export default function Sobre() {
           list.push(filho);
         });
       });
-      console.log(list);
       return list;
     }
   }, []);
