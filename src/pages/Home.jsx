@@ -34,7 +34,7 @@ export default function Home() {
     <>
       <header className="header">
         <div>
-          <h1 className="titulos">Bem-Vindo, venha ver mais sobre nós</h1>
+          <h1 className="titulos">Bem-Vindo, nós somos a</h1>
           <h2 className="subtitulos">[Nome Empresa]</h2>
         </div>
         <Link className="links" to="/sobre">
@@ -42,7 +42,7 @@ export default function Home() {
         </Link>
       </header>
       <main className="main">
-        <section>
+        <section id="section_imagem">
           <img
             className="imagem"
             src={imagemInicial}

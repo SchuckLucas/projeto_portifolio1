@@ -153,3 +153,49 @@ section,
   align-items: center;
   flex-direction: column;
 }
+
+@media (max-width: 768px) {
+  :root {
+    --tamanho-header: 200px;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .titulos {
+    font-size: 35px;
+  }
+
+  .subtitulos {
+    font-size: 25px;
+  }
+
+  .textos,
+  .links {
+    font-size: 20px;
+  }
+
+  .box_cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #section_imagem {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .imagem {
+    width: 175%;
+    border-radius: 0;
+    box-sizing: none;
+  }
+
+  .links {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
