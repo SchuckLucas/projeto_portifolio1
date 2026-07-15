@@ -1,31 +1,11 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import animarElementos from "../scripts/animation";
+import Card from "../components/Card";
 
 export default function Sobre() {
   useEffect(() => {
-    const elements = getElements();
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-          return;
-        }
-        entry.target.classList.remove("show");
-      });
-    });
-
-    elements.forEach((e) => observer.observe(e));
-
-    function getElements() {
-      let list = [];
-      document.querySelectorAll("section").forEach((section) => {
-        Array.from(section.children).forEach((filho) => {
-          filho.classList.add("hidden");
-          list.push(filho);
-        });
-      });
-      return list;
-    }
+    animarElementos();
   }, []);
 
   return (
@@ -68,38 +48,22 @@ export default function Sobre() {
         </section>
         <section className="box_section1">
           <div className="box_cards">
-            <div className="card">
-              <h1 className="titulos">☕ Qualidade</h1>
-              <p className="textos">
-                Selecionamos cuidadosamente cada ingrediente, desde os grãos de
-                café até os acompanhamentos, garantindo sabores únicos e uma
-                experiência de excelência em cada detalhe.
-              </p>
-            </div>
-            <div className="card">
-              <h1 className="titulos">🤝 Atendimento</h1>
-              <p className="textos">
-                Acreditamos que cada cliente merece ser recebido com atenção e
-                carinho. Nosso objetivo é criar conexões e tornar cada visita um
-                momento especial.
-              </p>
-            </div>
-            <div className="card">
-              <h1 className="titulos">🌱 Sustentabilidade</h1>
-              <p className="textos">
-                Buscamos práticas responsáveis em nosso dia a dia, valorizando
-                nossos parceiros, reduzindo desperdícios e contribuindo para um
-                futuro melhor.
-              </p>
-            </div>
-            <div className="card">
-              <h1 className="titulos">✨ Paixão</h1>
-              <p className="textos">
-                Colocamos dedicação e amor em tudo que fazemos. Cada café
-                preparado carrega o cuidado e a paixão da nossa equipe por criar
-                experiências memoráveis.
-              </p>
-            </div>
+            <Card
+              titulo="Qualidade"
+              texto="Selecionamos cuidadosamente cada ingrediente, desde os grãos de café até os acompanhamentos, garantindo sabores únicos e uma experiência de excelência em cada detalhe."
+            />
+            <Card
+              titulo="Atendimento"
+              texto="Acreditamos que cada cliente merece ser recebido com atenção e carinho. Nosso objetivo é criar conexões e tornar cada visita um momento especial."
+            />
+            <Card
+              titulo="Sustentabilidade"
+              texto="Buscamos práticas responsáveis em nosso dia a dia, valorizando nossos parceiros, reduzindo desperdícios e contribuindo para um futuro melhor."
+            />
+            <Card
+              titulo="Paixão"
+              texto="Colocamos dedicação e amor em tudo que fazemos. Cada café preparado carrega o cuidado e a paixão da nossa equipe por criar experiências memoráveis."
+            />
           </div>
         </section>
       </main>
